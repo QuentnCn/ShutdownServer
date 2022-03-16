@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.ClientMapper">
+    <insert id="insertUser" parameterType="org.example.entity.User">
+        INSERT INTO s_client (user_name, user_pwd, UUID, isDelete) VALUES (#{username},#{password},#{UUID},#{isDelete})
+    </insert>
+
+
+    <select id="selectUserByUsername" parameterType="string" resultType="org.example.entity.User">
+        SELECT id,user_name,user_pwd,UUID,isDelete FROM s_client WHERE user_name = #{username}
+    </select>
+</mapper>

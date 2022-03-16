@@ -1,0 +1,15 @@
+logging:
+  level:
+    org:
+      example: debug
+  file:
+    path: C:\Executor\Shutdown\log
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
+  pattern:
+    console: "%d{yyyy-MM-dd HH: mm:ss} %-5level %logger{36} %msg%n"
+    file: "%d{yyyy-MM-dd HH: mm:ss} %-5level %logger{36} %msg%n"
+server:
+  servlet:
+    context-path: /sd

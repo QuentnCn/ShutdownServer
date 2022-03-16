@@ -1,0 +1,12 @@
+server:
+  port: 10998
+
+spring:
+  profiles:
+    active: test
+  application:
+    name: cloud-shutdown-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

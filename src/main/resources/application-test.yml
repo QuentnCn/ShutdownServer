@@ -1,0 +1,16 @@
+logging:
+  level:
+    org:
+      example: debug
+  pattern:
+    console: "%d{yyyy-MM-dd HH: mm:ss} %-5level %logger{36} %msg%n"
+server:
+  servlet:
+    context-path: /sd
+
+#mybatis-plus:
+#  configuration:
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: false
